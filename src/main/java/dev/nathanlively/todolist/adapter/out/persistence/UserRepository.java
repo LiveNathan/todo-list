@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 interface UserRepository {
-    List<User> getAllUsers();
+    List<UserApiEntity> getAllUsers();
 }

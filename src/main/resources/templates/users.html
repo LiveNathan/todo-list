@@ -5,9 +5,13 @@
       layout:decorate="~{layout/main}">
 <body>
 <div layout:fragment="content">
-    <!-- Add content here -->
-    <div>Welcome to your Spring Boot with Thymeleaf project!</div>
-    <div>See <code>HELP.md</code> for instructions on how to get started.</div>
+    <select class="select select-primary w-full max-w-xs">
+        <option disabled selected>What is the best TV show?</option>
+        <option>Game of Thrones</option>
+        <option>Lost</option>
+        <option>Breaking Bad</option>
+        <option>Walking Dead</option>
+    </select>
 </div>
 <th:block layout:fragment="script-content">
     <!-- Add additional scripts there that are only needed for this page (Application wide scripts should be added in layout/main.html) --->

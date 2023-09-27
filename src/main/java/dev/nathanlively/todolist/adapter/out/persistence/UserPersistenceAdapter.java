@@ -15,7 +15,8 @@ class UserPersistenceAdapter implements LoadUsersPort {
     @Override
     public List<User> loadUsers() {
 
+        List<UserApiEntity> userApiEntities = userRepository.getAllUsers();
 
-        return users;
+        return userMapper.mapToDomainEntity(userApiEntities);
     }
 }

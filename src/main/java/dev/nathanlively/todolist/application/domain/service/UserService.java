@@ -17,9 +17,6 @@ public class UserService implements GetUsersUseCase {
 
     @Override
     public List<User> getAllUsers() {
-
-        List<User> users = loadUsersPort.loadUsers();
-
-        return users;
+        return loadUsersPort.loadUsers();
     }
 }
