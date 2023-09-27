@@ -1,12 +1,16 @@
 package dev.nathanlively.todolist.adapter.out.persistence;
 
+import dev.nathanlively.todolist.adapter.in.web.users.GetUsersResponse;
+import dev.nathanlively.todolist.adapter.in.web.users.UserDto;
 import dev.nathanlively.todolist.application.domain.model.User;
 import dev.nathanlively.todolist.application.port.out.LoadUsersPort;
+import dev.nathanlively.todolist.common.PersistenceAdapter;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
 @RequiredArgsConstructor
+@PersistenceAdapter
 class UserPersistenceAdapter implements LoadUsersPort {
 
     private final UserRepository userRepository;
@@ -15,8 +19,13 @@ class UserPersistenceAdapter implements LoadUsersPort {
     @Override
     public List<User> loadUsers() {
 
-        List<UserApiEntity> userApiEntities = userRepository.getAllUsers();
+        GetUsersResponse getUsersResponse = userRepository.getAllUsers();
 
-        return userMapper.mapToDomainEntity(userApiEntities);
+        return userMapper.mapToDomainEntity(getUsersResponse);
+    }
+
+    @Override
+    public List<UserDto> loadUserDtos(List<User> users) {
+        return userMapper.userToUserDto(users);
     }
 }

@@ -1,15 +1,14 @@
 package dev.nathanlively.todolist.adapter.out.persistence;
 
+import dev.nathanlively.todolist.adapter.in.web.users.GetUserDataItem;
+import dev.nathanlively.todolist.adapter.in.web.users.GetUserError;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 public class UserApiEntity {
-    private int id;
-    private String email;
-    private String first_name;
-    private String last_name;
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
+
+    private List<GetUserDataItem> data;
+    private GetUserError getUserError;
 }

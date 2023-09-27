@@ -1,17 +1,17 @@
 package dev.nathanlively.todolist.application.domain.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-import java.time.LocalDateTime;
-
+@Getter
 @AllArgsConstructor
 public class User {
     private int id;
     private String email;
-    private String first_name;
-    private String last_name;
+    private String firstName;
+    private String lastName;
 
-    public static User withId(int id, String email, String first_name, String last_name) {
-        return new User(id, email, first_name, last_name);
+    public static User withId(int id, String email, String firstName, String lastName) {
+        return new User(id, email, firstName, lastName);
     }
 }
