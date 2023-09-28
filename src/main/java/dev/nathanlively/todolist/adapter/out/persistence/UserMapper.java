@@ -1,8 +1,8 @@
 package dev.nathanlively.todolist.adapter.out.persistence;
 
-import dev.nathanlively.todolist.adapter.in.web.users.GetUserDataItem;
-import dev.nathanlively.todolist.adapter.in.web.users.GetUsersResponse;
-import dev.nathanlively.todolist.adapter.in.web.users.UserDto;
+import dev.nathanlively.todolist.adapter.in.web.getUsers.GetUserDataItem;
+import dev.nathanlively.todolist.adapter.in.web.getUsers.GetUsersResponse;
+import dev.nathanlively.todolist.adapter.in.web.getUsers.UserDto;
 import dev.nathanlively.todolist.application.domain.model.User;
 import org.springframework.stereotype.Component;
 

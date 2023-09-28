@@ -1,6 +1,6 @@
 package dev.nathanlively.todolist.adapter.out.persistence;
 
-import dev.nathanlively.todolist.adapter.in.web.users.GetUsersResponse;
+import dev.nathanlively.todolist.adapter.in.web.getUsers.GetUsersResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;

@@ -1,11 +1,6 @@
 package dev.nathanlively.todolist.adapter.out.persistence;
 
-import dev.nathanlively.todolist.adapter.in.web.users.GetUsersResponse;
-import dev.nathanlively.todolist.application.domain.model.User;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
+import dev.nathanlively.todolist.adapter.in.web.getUsers.GetUsersResponse;
 
 interface UserRepository {
     GetUsersResponse getAllUsers();

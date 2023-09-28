@@ -1,4 +1,4 @@
-package dev.nathanlively.todolist.adapter.in.web.users;
+package dev.nathanlively.todolist.adapter.in.web.getUsers;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
