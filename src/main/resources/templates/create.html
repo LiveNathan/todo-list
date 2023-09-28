@@ -5,6 +5,8 @@
       layout:decorate="~{layout/main}">
 <body>
 <div layout:fragment="content" class="flex items-center justify-center h-screen">
+    <p th:text="${#messages.msg('error')}">Error message</p>
+
     <form id="register-user-form" action="#" th:action="@{/users/create}" th:object="${userFormDto}" method="post" class="flex flex-col gap-y-4">
         <label class="sr-only" for="email">Email</label>
         <input id="email" type="email" th:field="*{email}" placeholder="Email" class="input input-bordered w-full max-w-sm" />

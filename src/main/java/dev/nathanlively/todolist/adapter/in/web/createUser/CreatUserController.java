@@ -20,8 +20,9 @@ public class CreatUserController {
     private final RegisterUserUseCase registerUserUseCase;
 
     @GetMapping
-    public String showCreateUsers(Model model) {
+    public String showCreateUsers(Model model, RedirectAttributes redirectAttributes) {
         model.addAttribute("userFormDto", new UserFormDto());
+        redirectAttributes.addFlashAttribute("error", model.asMap().get("error"));
         return "create";
     }
 
@@ -33,11 +34,11 @@ public class CreatUserController {
             success = registerUserUseCase.register(registerUserDto);
         } catch (RuntimeException e) {
             redirectAttributes.addFlashAttribute("error", "There was a problem creating a new user. Error: " + e.getMessage());
-            return "create";
+            return "redirect:/users/create";
         }
         if (!success) {
             redirectAttributes.addFlashAttribute("error", "There was a problem creating a new user.");
-            return "create";
+            return "redirect:/users/create";
         }
 
         redirectAttributes.addFlashAttribute("success", "User created successfully.");

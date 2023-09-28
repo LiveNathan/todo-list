@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<body>
+<!--max-w-7xl mx-auto px-4 sm:px-6 md:px-8-->
+<div th:fragment="alerts-combined" class="">
+
+    <th:block th:if="${success}">
+        <div th:replace="~{fragments/alerts :: success(message=${success},useHorizontalPadding=true)}"></div>
+    </th:block>
+
+    <th:block th:if="${error}">
+        <div th:replace="~{fragments/alerts :: error(message=${error},useHorizontalPadding=true)}"></div>
+    </th:block>
+
+</div>
+</body>
+</html>

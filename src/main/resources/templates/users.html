@@ -5,6 +5,8 @@
       layout:decorate="~{layout/main}">
 <body>
 <div layout:fragment="content" class="flex flex-col items-center justify-center h-screen gap-y-4">
+    <div th:replace="~{fragments/alerts-combined :: alerts-combined}"></div>
+
     <form class="flex gap-2">
         <select class="select select-primary w-full max-w-md">
             <option disabled selected>Select existing user</option>
