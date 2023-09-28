@@ -5,15 +5,15 @@
       layout:decorate="~{layout/main}">
 <body>
 <div layout:fragment="content" class="flex items-center justify-center h-screen">
-    <form action="#" th:action="@{/users/create}" th:object="${userFormDto}" method="post" class="flex flex-col gap-y-4">
+    <form id="register-user-form" action="#" th:action="@{/users/create}" th:object="${userFormDto}" method="post" class="flex flex-col gap-y-4">
         <label class="sr-only" for="email">Email</label>
-        <input id="email" type="email" placeholder="Email" class="input input-bordered w-full max-w-xs" />
+        <input id="email" type="email" th:field="*{email}" placeholder="Email" class="input input-bordered w-full max-w-sm" />
 
         <label class="sr-only" for="firstName">First Name</label>
-        <input id="firstName" type="text" placeholder="First Name" class="input input-bordered w-full max-w-xs" />
+        <input id="firstName" type="text" th:field="*{firstName}" placeholder="First Name" class="input input-bordered w-full max-w-sm" />
 
         <label class="sr-only" for="lastName">Last Name</label>
-        <input id="lastName" type="text" placeholder="Last Name" class="input input-bordered w-full max-w-xs" />
+        <input id="lastName" type="text" th:field="*{lastName}" placeholder="Last Name" class="input input-bordered w-full max-w-sm" />
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

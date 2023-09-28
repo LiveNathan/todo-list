@@ -14,4 +14,8 @@ public class User {
     public static User withId(int id, String email, String firstName, String lastName) {
         return new User(id, email, firstName, lastName);
     }
+
+    public static User withoutId(String email, String firstName, String lastName) {
+        return new User(-1, email, firstName, lastName);
+    }
 }
